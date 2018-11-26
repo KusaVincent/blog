@@ -1,0 +1,13 @@
+<h1 align="center">STORIES</h1>
+
+<%= render 'articles', obj: @articles %>
+
+<div align="center">
+	<%= will_paginate @articles %>
+</div>
+
+<% if user_signed_in? %>
+  <div align="center">
+	<%= link_to "Create new Article", new_article_path, class: "btn btn-xs btn-primary" %>
+  </div>
+<% end %>  
